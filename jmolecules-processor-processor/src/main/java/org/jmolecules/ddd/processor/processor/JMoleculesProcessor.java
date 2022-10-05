@@ -66,6 +66,11 @@ public class JMoleculesProcessor extends AbstractAnnotationProcessor {
 
     }
 
+    // -----------------------------------------------------------------------------------------
+    // Everything down below this comment will be integrated in https://github.com/toolisticon/aptk soon.
+    // This will reduced the setup of such kind of processors to a minimum.
+    // -----------------------------------------------------------------------------------------
+
     List<TypeElementWrapper> getDependenciesOfTypeElement(TypeElementWrapper typeElementWrapper) {
 
         List<TypeElementWrapper> dependenciesOfType = new ArrayList<>();
