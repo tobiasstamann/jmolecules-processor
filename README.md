@@ -1,38 +1,8 @@
-# ${rootArtifactId} Annotation Processor
+# JMolecules Annotation Processor
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/${groupId}/${rootArtifactId}/badge.svg)](https://maven-badges.herokuapp.com/maven-central/${groupId}/${rootArtifactId})
-[![Build Status](https://travis-ci.org/toolisticon/${rootArtifactId}.svg?branch=master)](https://travis-ci.org/toolisticon/${rootArtifactId})
-[![codecov](https://codecov.io/gh/toolisticon/${rootArtifactId}/branch/master/graph/badge.svg)](https://codecov.io/gh/toolisticon/${rootArtifactId})
+This is a short demo how compule time checks for jmolecules annotations could be done by an annotation processor.
+Dependency check will be integrated in the APTK framework in the near future.
 
-# Why you should use this project?
-
-
-# Features
-Annotation processor that
-
-...
-
-# How does it work?
-
-Just add the ${rootArtifactId} annotation processor dependency to your dependencies
-
-```xml`
-<dependencies>
-    <!-- must be on provided scope since it is just needed at compile time -->
-    <dependency>
-        <groupId>${groupId}</groupId>
-        <artifactId>${rootArtifactId}-processor</artifactId>
-        <version>0.1.0</version>
-        <scope>provided</scope>
-    </dependency>
-</dependencies>
-``
-
-
-## Preconditions
-
-## Example
-    
 # Contributing
 
 We welcome any kind of suggestions and pull requests.
