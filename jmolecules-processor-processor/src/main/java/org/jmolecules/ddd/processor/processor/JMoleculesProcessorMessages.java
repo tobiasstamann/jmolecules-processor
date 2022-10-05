@@ -6,7 +6,7 @@ import io.toolisticon.aptk.tools.corematcher.ValidationMessage;
 /**
  * Messages used by annotation processors.
  */
-public enum TBDProcessorMessages implements ValidationMessage {
+public enum JMoleculesProcessorMessages implements ValidationMessage {
 
     ERROR_ILLEGAL_REFERENCE("TBD_ERROR_001", "Class '${0}' annotated with '${1}' is not allowed to use class '${2}' annotated with '${3}'");
 
@@ -26,7 +26,7 @@ public enum TBDProcessorMessages implements ValidationMessage {
      * @param code    the message code
      * @param message the message text
      */
-        TBDProcessorMessages(String code, String message) {
+        JMoleculesProcessorMessages(String code, String message) {
         this.code = code;
         this.message = message;
     }

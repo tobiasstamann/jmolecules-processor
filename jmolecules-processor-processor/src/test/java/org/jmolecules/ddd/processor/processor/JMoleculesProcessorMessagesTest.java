@@ -5,17 +5,17 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 /**
- * Unit test for {@link TBDProcessorMessages}.
+ * Unit test for {@link JMoleculesProcessorMessages}.
  *
  * TODO: replace the example testcases with your own testcases
  *
  */
-public class TBDProcessorMessagesTest {
+public class JMoleculesProcessorMessagesTest {
 
     @Test
     public void test_enum() {
 
-        MatcherAssert.assertThat(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode(), Matchers.startsWith("TBD"));
+        MatcherAssert.assertThat(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode(), Matchers.startsWith("TBD"));
 
     }
 

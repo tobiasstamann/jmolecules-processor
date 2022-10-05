@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
  */
 
 @SpiService(Processor.class)
-public class TBDProcessor extends AbstractAnnotationProcessor {
+public class JMoleculesProcessor extends AbstractAnnotationProcessor {
 
     private final static Set<String> SUPPORTED_ANNOTATIONS = createSupportedAnnotationSet(ValueObject.class);
 
@@ -56,7 +56,7 @@ public class TBDProcessor extends AbstractAnnotationProcessor {
             // now do checks - for service annotation
             List<TypeElementWrapper> referencedServiceTypeElements = dependencies.stream().filter(e -> e.getAnnotation(Service.class).isPresent()).collect(Collectors.toList());
             for (TypeElementWrapper referencedType : referencedServiceTypeElements){
-                MessagerUtils.error(element,TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE, element.getSimpleName(), ValueObject.class.getSimpleName(), referencedType.getSimpleName(), Service.class.getSimpleName());
+                MessagerUtils.error(element, JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE, element.getSimpleName(), ValueObject.class.getSimpleName(), referencedType.getSimpleName(), Service.class.getSimpleName());
             }
 
 

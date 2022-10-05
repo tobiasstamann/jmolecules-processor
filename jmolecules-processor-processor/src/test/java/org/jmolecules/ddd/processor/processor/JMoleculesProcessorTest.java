@@ -1,23 +1,19 @@
 package org.jmolecules.ddd.processor.processor;
 
 import io.toolisticon.aptk.tools.MessagerUtils;
-import io.toolisticon.aptk.tools.corematcher.CoreMatcherValidationMessages;
 import io.toolisticon.cute.CompileTestBuilder;
 import io.toolisticon.cute.JavaFileObjectUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.tools.JavaFileObject;
-import javax.tools.StandardLocation;
-
 
 /**
- * Tests of {@link org.jmolecules.ddd.processor.processor.TBDProcessor}.
+ * Tests of {@link JMoleculesProcessor}.
  *
 
  */
 
-public class TBDProcessorTest {
+public class JMoleculesProcessorTest {
 
 
     CompileTestBuilder.CompilationTestBuilder compileTestBuilder;
@@ -28,7 +24,7 @@ public class TBDProcessorTest {
 
         compileTestBuilder = CompileTestBuilder
                 .compilationTest()
-                .addProcessors(TBDProcessor.class);
+                .addProcessors(JMoleculesProcessor.class);
     }
 
 
@@ -48,7 +44,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onField/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onField/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
     }
 
@@ -59,7 +55,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onConstructorParameter/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onConstructorParameter/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
     }
 
@@ -70,7 +66,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onMethodParameter/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onMethodParameter/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
 
     }
@@ -82,7 +78,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onMethodReturnType/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onMethodReturnType/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
 
     }
@@ -94,7 +90,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onExtends/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onExtends/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
 
     }
@@ -106,7 +102,7 @@ public class TBDProcessorTest {
                 .addSources("testcases/invalidusage_onImplements/TestcaseInvalidUsage.java",
                         "testcases/invalidusage_onImplements/ServiceClass.java")
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(TBDProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
+                .expectErrorMessageThatContains(JMoleculesProcessorMessages.ERROR_ILLEGAL_REFERENCE.getCode())
                 .executeTest();
 
     }
